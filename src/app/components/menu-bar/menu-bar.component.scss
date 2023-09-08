@@ -1,3 +1,6 @@
+/**
+* Local Variables
+**/ 
 $white: #fff;
 $offWhite: #f5f5f5;
 $athensGray: #F4F4F5;
@@ -9,10 +12,11 @@ $gutter: 0.25rem;
 
 $containerSize: 75rem;
 
+
+/* Style the navbar */
 .navbar {
     padding: $gutter*8;
 }
-/* Style the navbar */
 .container {
     display: flex;
     justify-content: space-between;
