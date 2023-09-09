@@ -1,0 +1,85 @@
+@import '/src/scss/variables';
+
+$heroBoxTextShadow: rgba(24, 26, 42, 0.12);
+
+.hero-banner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1216px;
+  height: 600px;
+
+  margin: 0 auto;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style the text box */
+.hero-info {
+  position: absolute;
+  left: 64px;
+  bottom: -70px;
+
+  max-width: 598px;
+
+  padding: 20px;
+
+  color: $ebonyClay;
+
+  background-color: $offWhite;
+  border-radius: 12px;
+  box-shadow: 0px 12px 24px -6px $heroBoxTextShadow;
+
+  .hero-flag {
+    display: inline-block;
+
+    max-width: auto;
+
+    padding: 4px 10px;
+    margin-bottom: 1rem;
+
+    border-radius: 6px;
+    background: $dodgerBlue;
+
+    span {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $offWhite;
+    }
+  }
+
+  .hero-title {
+    margin-bottom: 24px;
+
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: $mirage;
+  }
+
+  .hero-author {
+    display: flex;
+    align-items: center;
+    gap: $gutter*3;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .post-author {
+    color: $manatee;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .post-date {
+    color: $manatee;
+
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

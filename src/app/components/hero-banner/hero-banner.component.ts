@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-banner.component.scss']
 })
 export class HeroBannerComponent implements OnInit {
+  imagePath:string;
 
-  constructor() { }
+  constructor() {
+    this.imagePath = '/assets/images/banner-hero.png'
+  }
 
   ngOnInit(): void {
   }
 
+  getHeroBanner ():string {
+    return `url(${this.imagePath})`;
+  }
 }
