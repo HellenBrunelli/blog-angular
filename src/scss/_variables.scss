@@ -5,7 +5,11 @@
 $white: #fff;
 $offWhite: #f5f5f5;
 $athensGray: #F4F4F5;
+$gray: #E8E8EA;
+$iron: #DCDDDF;
+$silver: #cccccc;
 $manatee: #97989F;
+$midGray: #696A75;
 $tuna: #3B3C4A;
 $ebonyClay: #242535;
 $mirage: #181A2A;
@@ -15,3 +19,12 @@ $dodgerBlue: #4B6BFB;
 * Spacing Variables
 **/
 $gutter: 0.25rem;
+
+/**
+* Container Variable
+**/
+$containerSize: 76rem;
+
+@media (min-width:768px) {
+    $containerSize: 1rem;
+}
