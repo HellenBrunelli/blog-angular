@@ -9,6 +9,7 @@ import { AdsPlaceComponent } from './components/ads-place/ads-place.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { GridCardsComponent } from './components/grid-cards/grid-cards.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
     CardComponent,
     FooterComponent,
     HomeComponent,
+    GridCardsComponent,
   ],
   imports: [
     BrowserModule,
