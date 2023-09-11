@@ -1,0 +1,130 @@
+@import '/src/scss/variables';
+
+/**
+*  Local Variables
+**/
+$mobile-width: 768px;
+
+.grid-container {
+  margin: 0 $gutter*4 $gutter*20;  
+}
+.grid-title {
+  max-width: $containerSize;
+
+  margin: $gutter*30 1rem $gutter*4; 
+}
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-column-gap: $gutter*5;
+  grid-row-gap: $gutter*5;
+
+  margin-bottom: $gutter*8;
+}
+.card {
+  width: 100%;
+  background-color: $silver;
+  padding: $gutter*4;
+
+  border-radius: 12px;
+  border: 1px solid $gray;
+  background: $white;
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .hero-flag {
+    display: inline-block;
+
+    max-width: auto;
+
+    padding: $gutter $gutter*3;
+    margin-bottom: 1rem;
+
+    border-radius: 6px;
+    background: rgba(75, 107, 251, 0.05);
+
+    span {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $dodgerBlue;
+    }
+  }
+  .hero-title {
+    margin-bottom: $gutter*6;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $mirage;
+  }
+  .hero-author {
+    display: flex;
+    align-items: center;
+    gap: $gutter*3;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .post-author {
+    color: $manatee;
+
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .post-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $manatee;
+  }
+}
+.view-all {
+  display: flex;
+  justify-content: center;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gutter*3;
+
+    padding: $gutter*3 $gutter*5;
+
+    background-color: $white;
+
+    border-radius: 6px;
+    border: 1px solid rgba(105, 106, 117, 0.30);
+    
+    font-size: 1rem;
+    font-weight: 500;
+    color: $midGray;
+
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    margin: 0 $gutter*8 $gutter*8;
+  }
+  .grid-container {
+    max-width: $containerSize;
+
+    margin: 0 auto;
+  }
+  .grid-title {
+    margin: $gutter*30 auto $gutter*4;
+  }
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .card {
+    // max-width: 24.5rem;
+    flex: 0 0 calc(50% - 16px);
+  }  
+}
