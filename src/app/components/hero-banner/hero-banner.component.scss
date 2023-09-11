@@ -6,7 +6,7 @@ $heroBoxTextShadow: rgba(24, 26, 42, 0.12);
   position: relative;
 
   width: 100%;
-  max-width: 1216px;
+  max-width: $containerSize;
   height: 600px;
 
   margin: 0 auto;
@@ -14,16 +14,15 @@ $heroBoxTextShadow: rgba(24, 26, 42, 0.12);
   background-size: cover;
   background-position: center;
 }
-
-/* Style the text box */
 .hero-info {
   position: absolute;
-  left: 64px;
+  left: 15%;
+  right: 15%;
   bottom: -70px;
 
   max-width: 598px;
 
-  padding: 20px;
+  padding: $gutter*5;
 
   color: $ebonyClay;
 
@@ -36,8 +35,8 @@ $heroBoxTextShadow: rgba(24, 26, 42, 0.12);
 
     max-width: auto;
 
-    padding: 4px 10px;
-    margin-bottom: 1rem;
+    padding: $gutter $gutter*3;
+    margin-bottom: $gutter*4;
 
     border-radius: 6px;
     background: $dodgerBlue;
@@ -48,15 +47,13 @@ $heroBoxTextShadow: rgba(24, 26, 42, 0.12);
       color: $offWhite;
     }
   }
-
   .hero-title {
-    margin-bottom: 24px;
+    margin-bottom: $gutter*6;
 
-    font-size: 2.25rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: $mirage;
   }
-
   .hero-author {
     display: flex;
     align-items: center;
@@ -67,19 +64,30 @@ $heroBoxTextShadow: rgba(24, 26, 42, 0.12);
       height: 36px;
     }
   }
-
   .post-author {
     color: $manatee;
 
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
   }
-
   .post-date {
     color: $manatee;
 
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
+  }
+}
+
+/**
+*  LARGE DEVICES
+**/
+@media (min-width: 768px) {
+  .hero-info {
+    left: 64px;
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
   }
 }

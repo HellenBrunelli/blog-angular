@@ -1,9 +1,5 @@
 @import '/src/scss/variables';
 
-$containerSize: 75rem;
-
-
-/* Style the navbar */
 .navbar {
     padding: $gutter*8;
 }
@@ -11,19 +7,15 @@ $containerSize: 75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    margin: 0 auto;
 
     max-width: $containerSize;
-
-    margin: 0 auto;
 }
-
-/* Style the logo */
 .logo img {
     width: 11.25rem;
     height: 3rem;
 }
-
-/* Style the menu */
 .menu {
     ul {
         display: flex;
@@ -45,13 +37,11 @@ $containerSize: 75rem;
         }
     }
 }
-
-/* Style the search input and button */
 .search {
     display: flex;
     align-items: center;
     
-    padding: 8px 8px 8px 16px;
+    padding: $gutter*2 $gutter*2 $gutter*2 $gutter*4;
 
     border: solid 1px transparent;    
     background-color: $athensGray;
@@ -60,31 +50,32 @@ $containerSize: 75rem;
     &:focus-within {
         border: solid 1px $dodgerBlue;
     }
-
     input[type="text"] {
         flex: 1;
-        
-        padding: 5px;
+
+        padding: $gutter;
         
         border: none;
         border-radius: 3px;
         background: none;
+
         outline: none;
     }
     .search-button {
+        padding: $gutter $gutter*3;
+        
         color: $offWhite;
+        
         border: none;
         border-radius: 3px;
-        padding: 5px 10px;
-        cursor: pointer;
         background: none;
+        
+        cursor: pointer;
     }
     .search-button i {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
-
-/* Style the toggle switch */
 .switch {
     position: relative;
 
@@ -106,7 +97,7 @@ $containerSize: 75rem;
         right: 0;
         bottom: 0;
     
-        background-color: #242535;
+        background-color: $ebonyClay;
         border-radius: 20px;
     
         -webkit-transition: .4s;
@@ -139,17 +130,18 @@ $containerSize: 75rem;
     }
 }
 
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
+/**
+*  LARGE DEVICES
+**/
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
     .menu {
-        margin-top: 20px;
+        margin-top: $gutter*5;
     }
     .search {
-        margin-top: 20px;
+        margin-top: $gutter*5;
     }
 }
