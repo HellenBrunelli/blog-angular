@@ -1,1 +1,117 @@
-<p>footer works!</p>
+<section class="footer">
+  <div class="content">
+
+    <ng-template [ngIf]="isMobile">
+      <div class="row">
+        <div class="col">
+          <h2>Open <b>multiple</b></h2>
+          <div class="tabs">
+            <div class="tab">
+              <input type="checkbox" id="chck1">
+              <label class="tab-label" for="chck1">Item 1</label>
+              <div class="tab-content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+              </div>
+            </div>
+            <div class="tab">
+              <input type="checkbox" id="chck2">
+              <label class="tab-label" for="chck2">Item 2</label>
+              <div class="tab-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="!isMobile">
+      <div class="info">
+        <div class="about">
+          <h4 class="footer-title">About</h4>
+          <p class="about-desciption">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+        <div class="contact">
+          <p class="email">
+            <span class="span">Email : </span> <span class="text-wrapper-2">info@jstemplate.net</span>
+          </p>
+          <p class="phone"><span class="span">Phone : </span> <span class="text-wrapper-2">880 123 456 789</span></p>
+        </div>
+      </div>
+
+      <div class="link">
+
+        <div class="link-col">
+          <div class="footer-title">Quick Link</div>
+          <ul class="link-list">
+            <li class="link-item"><a href="">Home</a></li>
+            <li class="link-item"><a href="">About</a></li>
+            <li class="link-item"><a href="">Blog</a></li>
+            <li class="link-item"><a href="">Archived</a></li>
+            <li class="link-item"><a href="">Author</a></li>
+            <li class="link-item"><a href="">Contact</a></li>
+              <a href=""></a>
+          </ul>
+        </div>
+
+        <div class="link-col">
+          <div class="footer-title">Category</div>
+          <ul class="link-list">
+            <li class="link-item"><a href="">Lifestyle</a></li>
+            <li class="link-item"><a href="">Technology</a></li>
+            <li class="link-item"><a href="">Travel</a></li>
+            <li class="link-item"><a href="">Business</a></li>
+            <li class="link-item"><a href="">Economy</a></li>
+            <li class="link-item"><a href="">Sports</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="newsletter">
+        <div class="newsletter-header">
+          <div class="newsletter-title">Weekly Newsletter</div>
+          <p class="newsletter-text">Get blog articles and offers via email</p>
+        </div>
+        <div class="newsletter-form">
+          <div class="newsletter-label">
+            <input class="newsletter-input" type="text">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4375 4.375C2.91973 4.375 2.5 4.79473 2.5 5.3125V14.6875C2.5 15.2053 2.91973 15.625 3.4375 15.625H16.5625C17.0803 15.625 17.5 15.2053 17.5 14.6875V5.3125C17.5 4.79473 17.0803 4.375 16.5625 4.375H3.4375ZM1.25 5.3125C1.25 4.10438 2.22938 3.125 3.4375 3.125H16.5625C17.7706 3.125 18.75 4.10438 18.75 5.3125V14.6875C18.75 15.8956 17.7706 16.875 16.5625 16.875H3.4375C2.22938 16.875 1.25 15.8956 1.25 14.6875V5.3125Z" fill="#696A75"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.88165 5.86629C4.09357 5.59382 4.48625 5.54474 4.75871 5.75665L10 9.83321L15.2413 5.75665C15.5138 5.54474 15.9064 5.59382 16.1183 5.86629C16.3303 6.13875 16.2812 6.53143 16.0087 6.74335L10.3837 11.1183C10.158 11.2939 9.84198 11.2939 9.61629 11.1183L3.99129 6.74335C3.71882 6.53143 3.66974 6.13875 3.88165 5.86629Z" fill="#696A75"/>
+              </svg>
+          </div>
+          <button class="newsletter-submit">Subscribe</button>
+        </div>
+      </div>
+    </ng-template>
+
+  </div>
+
+  <div class="copyright">
+    <div class="copyright-wrap">
+      <div class="copyright-info">
+        <!-- <img class="logo" src="" /> -->
+        <div class="text">
+          <p class="author-blog">
+            <span class="copyright-text">HB </span>
+            <span class="copyright-text">Blog by</span>
+          </p>
+          <p class="JS-template-all">
+            <span class="copyright-text">© </span>
+            <span class="copyright-text">JS Template</span>
+            <span class="copyright-text"> 2023. All Rights Reserved.</span>
+          </p>
+        </div>
+      </div>
+      <ul class="copyright-list">
+        <li class="copyright-item"><a href="">Terms of Use</a></li>
+        <li class="copyright-item"><a href="">Privacy Policy</a></li>
+        <li class="copyright-item"><a href="">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
