@@ -1,15 +1,18 @@
 <nav class="navbar">
   <div class="container">
-    <div class="logo">
-      <!-- <img src="/assets/images/logo-blog-light.png" alt="HB Logo"> -->
-      Hellen Blog
+    <div class="menu-mobile" (click)="menuToggle()" [ngClass]="open ? 'open' : 'closed'">
+      <div class="mobile-button"></div>
     </div>
-    <div class="menu">
+    <div class="logo">
+      <a [routerLink]="['']">HB Blog</a>
+    </div>
+    <div class="menu" [ngClass]="open ? 'open' : 'closed'">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Single Post</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a [routerLink]="['']" (click)="menuToggle()">Home</a></li>
+        <li><a [routerLink]="['']" (click)="menuToggle()">Blog</a></li>
+        <li><a [routerLink]="['']" (click)="menuToggle()">Single Post</a></li>
+        <li><a [routerLink]="['']" (click)="menuToggle()">Contact</a></li>
+
       </ul>
     </div>
     <div class="search">
