@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: $gutter*16;
+  padding: $gutter*8 $gutter*4;
 
   border-top: 1px solid $gray;
   background: $athensGray;
@@ -13,9 +13,7 @@
   .content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: $gutter*15;
     
     max-width: $containerSize;
     
@@ -41,14 +39,12 @@
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.2;
-
         color: $tuna;
       }
       .span {
-        color: $mirage;
-
         font-size: 1rem;
         font-weight: 600;
+        color: $mirage;
       }
     }
     .link {
@@ -85,6 +81,7 @@
       max-width: 392px;
       
       padding: $gutter*8;
+      margin-bottom: $gutter*8;
       
       border-radius: 12px;
       background: $white;
@@ -136,7 +133,7 @@
       .newsletter-form {
         display: flex;
         flex-direction: column;
-        gap: $gutter*2;
+        gap: $gutter*4;
       }
       .newsletter-submit {
         display: flex;
@@ -152,9 +149,13 @@
 
         border-radius: 6px;
         background: $dodgerBlue;
-        border: none;
+        border: solid 1px $dodgerBlue;
 
         cursor: pointer;
+      }
+      .newsletter-submit:hover {
+        color: $dodgerBlue;
+        background: $white;
       }
     }
   }
@@ -166,22 +167,34 @@
 
     .copyright-wrap {
       display: flex;
+      flex-direction: column-reverse;
       justify-content: space-between;
+      gap: $gutter*8;
 
       width: 100%;
       max-width: $containerSize;
 
-      padding: $gutter*8 0;
+      padding: $gutter*8 0 0;
 
       border-top: 1px solid $iron;
 
       .copyright-info {
         display: flex;
+        justify-content: center;
         gap: $gutter*3;
+
+        padding: $gutter*8 0 0;
+
+        border-top: solid 1px $iron;
+
+        .text {
+          display: flex;
+          gap: $gutter*2
+        }
       }
       .copyright-list {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         gap: $gutter*8;
 
         padding: 0;
@@ -190,6 +203,8 @@
       }
       .copyright-item {
         position: relative;
+
+        line-height: 1.5;
 
         & + li:before {
           content: '';
@@ -201,7 +216,6 @@
           
           background: $gray;
         }
-
         a {
           color: $tuna;
 
@@ -221,120 +235,6 @@
   }
 }
 
-
-
-// $midnight: #2c3e50;
-// $clouds: #ecf0f1;
-
-// // General
-// body {
-//   color: $midnight;
-//   background: $clouds;
-//   padding: 0 1em 1em;
-// }
-
-// h1 {
-//   margin: 0;
-//   line-height: 2;
-//   text-align: center;
-// }
-
-// h2 {
-//   margin: 0 0 .5em;
-//   font-weight: normal;
-// }
-
-// input {
-//   position: absolute;
-//   opacity: 0;
-//   z-index: -1;
-// }
-
-// // Layout
-// .row {
-//   display: flex;
-
-//   .col {
-//     flex: 1;
-
-//     &:last-child {
-//       margin-left: 1em;
-//     }
-//   }
-// }
-
-// /* Accordion styles */
-// .tabs {
-//   border-radius: 8px;
-//   overflow: hidden;
-//   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-// }
-
-// .tab {
-//   width: 100%;
-//   color: white;
-//   overflow: hidden;
-
-//   &-label {
-//     display: flex;
-//     justify-content: space-between;
-//     padding: 1em;
-//     background: $midnight;
-//     font-weight: bold;
-//     cursor: pointer;
-
-//     /* Icon */
-//     &:hover {
-//       background: darken($midnight, 10%);
-//     }
-
-//     &::after {
-//       content: "\276F";
-//       width: 1em;
-//       height: 1em;
-//       text-align: center;
-//       transition: all .35s;
-//     }
-//   }
-
-//   &-content {
-//     max-height: 0;
-//     padding: 0 1em;
-//     color: $midnight;
-//     background: white;
-//     transition: all .35s;
-//   }
-
-//   &-close {
-//     display: flex;
-//     justify-content: flex-end;
-//     padding: 1em;
-//     font-size: 0.75em;
-//     background: $midnight;
-//     cursor: pointer;
-
-//     &:hover {
-//       background: darken($midnight, 10%);
-//     }
-//   }
-// }
-
-// // :checked
-// input:checked {
-//   +.tab-label {
-//     background: darken($midnight, 10%);
-
-//     &::after {
-//       transform: rotate(90deg);
-//     }
-//   }
-
-//   ~.tab-content {
-//     max-height: 100vh;
-//     padding: 1em;
-//   }
-// }
-
 /**
 *  LARGE DEVICES
 **/
@@ -348,7 +248,27 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
       gap: 32px;
+
       width: 100%;
+    }
+    .copyright {
+      border-top: solid 1px $iron;
+
+      .copyright-wrap {
+        flex-direction: row;
+        
+        border-top: none;
+
+        .copyright-info {
+          padding: 0;
+        
+          border: none;
+        }
+        .copyright-list {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
     }
   }
 }

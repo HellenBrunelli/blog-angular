@@ -1,9 +1,19 @@
 <section class="grid">
   <div class="grid-container">
     <h3 class="grid-title">Latest Post</h3>
-  
-    <app-card class="grid-cards"></app-card>
-    
+
+    <div class="grid-cards">
+        <app-card *ngFor="let post of posts"
+          id="{{post.id}}" 
+          cardPhoto="{{post.photo}}"  
+          cardFlag="{{post.flag}}"  
+          cardTitle="{{post.title}}"
+          cardAuthor="{{post.author}}"
+          cardDate="{{post.date}}"
+        >
+        </app-card>
+    </div>
+
     <div class="view-all">
       <button>View All Posts</button>
     </div>
