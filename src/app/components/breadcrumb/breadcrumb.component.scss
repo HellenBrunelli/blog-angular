@@ -1,0 +1,30 @@
+@import '/src/scss/variables';
+
+.breadcrumb {
+  padding: $gutter*8 0;
+  
+  list-style: none;
+
+  li {
+    display: inline;
+    
+    font-size: 1.125rem;
+  }
+  li+li:before {
+    content: "/\00a0";
+    
+    padding: 8px;
+    
+    color: $silver;
+  }
+  li,
+  li a {
+    color: $silver;
+    text-decoration: none;
+  }
+  li:hover,
+  li a:hover {
+    color: $dodgerBlue;
+    text-decoration: none;
+  }
+}
