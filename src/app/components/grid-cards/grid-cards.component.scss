@@ -103,6 +103,14 @@ $mobile-width: 768px;
 
     cursor: pointer;
   }
+
+  &:hover {
+    button {
+      border: 1px solid $dodgerBlue;
+      color: $dodgerBlue;
+    }
+
+  }
 }
 
 @media (min-width: 768px) {
