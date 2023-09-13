@@ -19,7 +19,7 @@ $mobile-width: 768px;
     
     margin-bottom: 1rem;
   }
-  .hero-flag {
+  .card-flag {
     display: inline-block;
 
     max-width: auto;
@@ -37,15 +37,19 @@ $mobile-width: 768px;
     }
   }
 
-  .hero-title {
+  .card-title {
     margin-bottom: $gutter*6;
 
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: $mirage;
+    
+    a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $mirage;
+      text-decoration: none;
+    }
   }
 
-  .hero-author {
+  .card-author {
     display: flex;
     align-items: center;
     gap: $gutter*3;
