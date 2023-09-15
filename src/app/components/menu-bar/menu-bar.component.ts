@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/shared/services/menu/menu.service';
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
   open: boolean = false;
+  menuData: any[] = [];
 
-  constructor() {
-  }
+  constructor(
+    private menuService: MenuService, 
+  ) { }
 
   ngOnInit(): void {
+    this.menuService.getMenuData().subscribe(data => {
+      this.menuData = data;
+    });
   }
   menuToggle(): void {
-    this.open = !this.open;
+    if(window.innerWidth < 768) {
+      this.open = !this.open;
+    }
   }
 }

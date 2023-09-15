@@ -6,13 +6,19 @@
     <div class="logo">
       <a [routerLink]="['']">HB Blog</a>
     </div>
-    <div class="menu" [ngClass]="open ? 'open' : 'closed'">
+    <div class="menu" [ngClass]="open ? 'open' : 'closed'" >
       <ul>
-        <li><a [routerLink]="['']" (click)="menuToggle()">Home</a></li>
-        <li><a [routerLink]="['']" (click)="menuToggle()">Blog</a></li>
-        <li><a [routerLink]="['']" (click)="menuToggle()">Single Post</a></li>
-        <li><a [routerLink]="['']" (click)="menuToggle()">Contact</a></li>
 
+        <li *ngFor="let item of menuData">
+          <a 
+            [routerLink]="item.link" 
+            [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="menuToggle()">
+              {{item.titulo}}
+          </a>
+        </li>
+        
       </ul>
     </div>
     <div class="search">
