@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "photo": "https://picsum.photos/1216/462",
+        "flag": "Technology",
+        "title": "The Impact of Technology on the Workplace: How Technology is Changing",
+        "author": "Hellen Brunelli",
+        "date": "August 20, 2022",
+        "article": "New Feature: Read about The Impact of Technology on the Workplace: How Technology is Changing"
+    },
+    {
+        "id": "2",
+        "photo": "https://picsum.photos/1217/462",
+        "flag": "Automotive",
+        "title": "Technological innovations in the automotive industry in Brazil",
+        "author": "Hellen Brunelli",
+        "date": "October 20, 2022",
+        "article": "New Feature: Read about Technological innovations in the automotive industry in Brazil"
+    },
+    {
+        "id": "3",
+        "photo": "https://picsum.photos/1218/462",
+        "flag": "Culture",
+        "title": "Brasilian Culture: From Carnival to Samba",
+        "author": "Hellen Brunelli",
+        "date": "May 28th, 2023",
+        "article": "New Feature: Read about Brasilian Culture: From Carnival to Samba"
+    },
+    {
+        "id": "4",
+        "photo": "https://picsum.photos/1219/462",
+        "flag": "Sports",
+        "title": "Football as a national passion",
+        "author": "Hellen Brunelli",
+        "date": "August 13, 2023",
+        "article": "New Feature: Read about Football as a national passion"
+    }
+]

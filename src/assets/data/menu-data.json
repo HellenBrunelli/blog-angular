@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "titulo": "Home",
+      "link": "/"
+    },
+    {
+      "id": 2,
+      "titulo": "All Posts",
+      "link": "/allposts"
+    },
+    {
+      "id": 3,
+      "titulo": "Contact",
+      "link": "/contact"
+    }
+  ]
