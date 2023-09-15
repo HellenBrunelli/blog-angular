@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { dataMock } from 'src/app/data/dataMock';
+import { PostsService } from 'src/app/shared/services/posts/posts.service';
+
 
 @Component({
   selector: 'app-post',
@@ -8,6 +9,7 @@ import { dataMock } from 'src/app/data/dataMock';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
+  postsData: any[] = [];
   
   postBanner:string = ''
   postFlag:string = ''
@@ -19,7 +21,8 @@ export class PostComponent implements OnInit {
   private id:string | null  = "0"
 
   constructor(
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private postsService: PostsService
   ) { }
 
   ngOnInit(): void {
@@ -29,13 +32,16 @@ export class PostComponent implements OnInit {
   }
 
   setValuesComponent(id:string | null) {
-    const data = dataMock.filter(article => article.id == id)[0];
-    
-    this.postBanner = data.photo;
-    this.postFlag = data.flag;
-    this.postTitle = data.title;
-    this.postAuthor = data.author;
-    this.postDate = data.date;
-    this.postArticle = data.article
+    this.postsService.getPostsData().subscribe(data => {
+      const index = Number(id) - 1;
+      const postData = data[index];
+
+      this.postBanner = postData.photo;
+      this.postFlag = postData.flag;
+      this.postTitle = postData.title;
+      this.postAuthor = postData.author;
+      this.postDate = postData.date;
+      this.postArticle = postData.article
+    });
   }
 }
